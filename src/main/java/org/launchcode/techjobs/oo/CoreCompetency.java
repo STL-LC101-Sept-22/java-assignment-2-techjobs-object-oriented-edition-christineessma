@@ -13,9 +13,21 @@ public class CoreCompetency {
         nextId++;
     }
 
+    public String getValue() {
+        return value;
+        //getter for value field
+    }
+
+
+    public void setValue(String value) {
+        this.value = value;
+        //setter for value field
+    }
+
     public CoreCompetency(String value) {
         this();
         this.value = value;
+
     }
 
     // Custom toString, equals, and hashCode methods:
@@ -23,6 +35,11 @@ public class CoreCompetency {
     @Override
     public String toString() {
         return value;
+    }
+
+    public int getId() {
+        return id;
+        //getter for id field
     }
 
     @Override
