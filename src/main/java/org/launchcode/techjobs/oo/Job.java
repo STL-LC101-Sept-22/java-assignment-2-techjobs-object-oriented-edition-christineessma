@@ -49,10 +49,30 @@ public class Job {
         return Objects.hash(id);
     }
 
+    @Override
+    public String toString() {
+        if (this.name == "") {
+            name = "Data not available";
+        }
+        /*if (this.employer == "") {
+            name = "Data not available";
+        }*/
+        /*if (this.location == "") {
+            name = "Data not available";
+        }*/
+
+        return "\n" +
+                "ID: " + getId() + "\n" +
+                "Name: " + getName() + "\n" +
+                "Employer: " + getEmployer() + "\n" +
+                "Location: " + getLocation() + "\n" +
+                "Position Type: " + getPositionType() + "\n" +
+                "Core Competency: " + getCoreCompetency() + "\n";
+
+    }
 
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
-
 
     public int getId() {
         return id;
@@ -98,3 +118,4 @@ public class Job {
         this.coreCompetency = coreCompetency;
     }
 }
+
